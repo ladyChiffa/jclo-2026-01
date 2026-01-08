@@ -3,8 +3,9 @@ package org.example.jclo_2026_01;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-
+@RestController
 @SpringBootApplication
 public class Jclo202601Application {
 
@@ -12,4 +13,8 @@ public class Jclo202601Application {
 		SpringApplication.run(Jclo202601Application.class, args);
 	}
 
+	@GetMapping("/")
+	private String hello () {
+		return "Hello from app";
+	}
 }
