@@ -1,9 +1,18 @@
 package org.example.jclo_2026_01.domain;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 import java.util.Objects;
 
 public class Person {
+    @NotBlank
+    @Size(min = 0, max = 20)
     private String name;
+    @Min(0)
+    @Max(150)
     private int age;
 
     // методы для работы Jackson, который дефолтный для сериализации
