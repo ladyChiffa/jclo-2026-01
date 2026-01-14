@@ -30,13 +30,4 @@ public class BrokenController {
         throw new IllegalArgumentException("IllegalArgumentException");
     }
 
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<String> illegalHandler(IllegalArgumentException e) {
-        return new ResponseEntity<>("Exception in throwException method", HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<String> reHandler() {
-        return new ResponseEntity<>("Exception in throwException method", HttpStatus.I_AM_A_TEAPOT);
-    }
 }

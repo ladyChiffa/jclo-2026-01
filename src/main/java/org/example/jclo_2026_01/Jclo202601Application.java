@@ -12,4 +12,4 @@ public class Jclo202601Application {
 		SpringApplication.run(Jclo202601Application.class, args);
 	}
 	
-}
+}	
